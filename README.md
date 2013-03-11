@@ -16,9 +16,9 @@ You'll need to re-compile Nginx from source to include this module.
 Modify your compile of Nginx by adding the following directive
 (modified to suit your path of course):
 
-./configure --add-module=/absolute/path/to/nginx-http-touch 
-make
-make install
+    ./configure --add-module=/absolute/path/to/nginx-http-touch 
+    make
+    make install
 
 
 Usage:
