@@ -41,6 +41,7 @@ Original config of nginx.conf
 http://hostname/touch
 
 Content of http response:
+
     Worker id: pid
     upstream name: upstreamname
     10.1.3.1:80 weight=10, max_fails=2, fail_timeout=30, down=0, backup=0
@@ -51,6 +52,7 @@ Content of http response:
 http://hostname/touch?upstream=upstreamname&server=10.1.3.1:80&weight=79&max_fails=20&fail_timeout=38&down=1<br>
 
 Content of http response:<br>
+
     Worker id: pid
     upstream name: upstreamname
     10.1.3.1:80 weight=79, max_fails=20, fail_timeout=38, down=1, backup=0
