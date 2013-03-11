@@ -27,13 +27,13 @@ Usage:
 Original config of nginx.conf
 
 upstream upstreamname {<br>
-     server 10.1.3.1   weight=10 max_fails=2  fail_timeout=30s;<br>
-     server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;<br>
+	server 10.1.3.1   weight=10 max_fails=2  fail_timeout=30s;<br>
+	server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;<br>
 }
 
 server{<br>
-		location /touch {<br>     
-		    touch;<br>       
+	location /touch {<br>
+		touch;<br>
 		}<br>
 }<br>
 
@@ -56,10 +56,14 @@ upstream name: upstreamname<br>
 10.1.3.1:80 weight=79, max_fails=20, fail_timeout=38, down=1, backup=0<br>
 10.1.3.2:80 weight=5, max_fails=2, fail_timeout=30, down=0, backup=0<br>
 
-If you encounter any issues, mail me : junsuilin@gmail.com
+
 
 Contributing:
 --
+
+If you encounter any issues, mail me : junsuilin@gmail.com
+
+
 Git source repositories:
 https://github.com/iZephyr/nginx-http-touch.git
 
