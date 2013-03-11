@@ -1,8 +1,7 @@
-nginx-http-touch
-================
+Nginx Touch
+--
 
 Description:
-Nginx module,  that dynamic change the upstream's config
 
 The Nginx Touch module enhances the standard round-robin load balancer provided
 with dynamically change the configuration of round-robin upstream server, Include 
@@ -27,10 +26,11 @@ Usage:
 Original config of nginx.conf
 
 upstream upstreamname {
-     server 10.1.3.1   weight=10 max_fails=2  fail_timeout=30s;
-     server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;	   
+	   server 10.1.3.1   weight=10 max_fails=2  fail_timeout=30s;
+	   server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;	   
 }
 
+#the touch url
 server{
 		location /touch {
 		    touch;
@@ -64,3 +64,4 @@ Git source repositories:
 https://github.com/iZephyr/nginx-http-touch.git
 
 Please feel free to fork the project at GitHub and submit pull requests.
+
