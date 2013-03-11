@@ -27,14 +27,21 @@ Usage:
 Original config of nginx.conf
 
 upstream upstreamname {
+
      server 10.1.3.1   weight=10 max_fails=2  fail_timeout=30s;
-     server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;	   
+     
+     server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;
+     
 }
 
 server{
+
 		location /touch {
+        
 		    touch;
+            
 		}
+        
 }
 
 1. Browse your Nginx config file's upstream block through url:
