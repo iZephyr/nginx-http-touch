@@ -2,7 +2,7 @@ nginx-http-touch
 ================
 
 Description:
-Nginx module,  that dynamic change the upstream's config
+Nginx module,  that dynamically change the upstream's config
 
 The Nginx Touch module enhances the standard round-robin load balancer provided
 with dynamically change the configuration of round-robin upstream server, Include 
