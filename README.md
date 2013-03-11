@@ -32,6 +32,7 @@ Original config of nginx.conf
     }
 
     server{
+        ...
         location /touch {
             touch;
         }
