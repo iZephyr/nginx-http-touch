@@ -31,7 +31,6 @@ upstream upstreamname {
 	   server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;	   
 }
 
-#the touch url
 server{
 		location /touch {
 		    touch;
