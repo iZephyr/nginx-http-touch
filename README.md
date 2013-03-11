@@ -51,7 +51,7 @@ Content of http response:
 
 http://hostname/touch?upstream=upstreamname&server=10.1.3.1:80&weight=79&max_fails=20&fail_timeout=38&down=1<br>
 
-Content of http response:<br>
+Content of http response:
 
     Worker id: pid
     upstream name: upstreamname
