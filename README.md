@@ -26,35 +26,35 @@ Usage:
 
 Original config of nginx.conf
 
-upstream upstreamname {<br>
-	server 10.1.3.1   weight=10 max_fails=2  fail_timeout=30s;<br>
-	server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;<br>
-}
+    upstream upstreamname {
+        server 10.1.3.1   weight=10 max_fails=2  fail_timeout=30s;
+        server 10.1.3.2   weight=5 max_fails=2  fail_timeout=30s;
+    }
 
-server{<br>
-	location /touch {<br>
-		touch;<br>
-		}<br>
-}<br>
+    server{
+        location /touch {
+            touch;
+        }
+    }
 
 1. Browse your Nginx config file's upstream block through url:
 http://hostname/touch
 
-Content of http response:<br>
-Worker id: pid<br>
-upstream name: upstreamname<br>
-10.1.3.1:80 weight=10, max_fails=2, fail_timeout=30, down=0, backup=0<br>
-10.1.3.2:80 weight=5, max_fails=2, fail_timeout=30, down=0, backup=0<br>
+Content of http response:
+    Worker id: pid
+    upstream name: upstreamname
+    10.1.3.1:80 weight=10, max_fails=2, fail_timeout=30, down=0, backup=0
+    10.1.3.2:80 weight=5, max_fails=2, fail_timeout=30, down=0, backup=0
 
 2.Change your Nginx config file's upstream block through url:
 
 http://hostname/touch?upstream=upstreamname&server=10.1.3.1:80&weight=79&max_fails=20&fail_timeout=38&down=1<br>
 
 Content of http response:<br>
-Worker id: pid<br>
-upstream name: upstreamname<br>
-10.1.3.1:80 weight=79, max_fails=20, fail_timeout=38, down=1, backup=0<br>
-10.1.3.2:80 weight=5, max_fails=2, fail_timeout=30, down=0, backup=0<br>
+    Worker id: pid
+    upstream name: upstreamname
+    10.1.3.1:80 weight=79, max_fails=20, fail_timeout=38, down=1, backup=0
+    10.1.3.2:80 weight=5, max_fails=2, fail_timeout=30, down=0, backup=0
 
 
 
