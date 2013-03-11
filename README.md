@@ -38,7 +38,8 @@ Original config of nginx.conf
     }
 
 1. Browse your Nginx config file's upstream block through url:
-http://hostname/touch
+
+<b>http://hostname/touch</b>
 
 Content of http response:
 
@@ -49,7 +50,7 @@ Content of http response:
 
 2.Change your Nginx config file's upstream block through url:
 
-http://hostname/touch?upstream=upstreamname&server=10.1.3.1:80&weight=79&max_fails=20&fail_timeout=38&down=1<br>
+<b>http://hostname/touch?upstream=upstreamname&server=10.1.3.1:80&weight=79&max_fails=20&fail_timeout=38&down=1</b>
 
 Content of http response:
 
